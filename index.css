@@ -154,16 +154,75 @@ body{
 .buttons{
     text-align: center;
     display: inline-block;
-    width: 10%;
     font-family: 'Inter', sans-serif;
     font-size: 25px;
     color: rgb(0, 0, 0);
     background: white;
     border-radius: 10px;
     margin-bottom: 5%;
+}
 
-    position:absolute;
+.rulesBox{
+
+    border: 5px solid rgb(255, 255, 255);
+    background: green;
+    /* display: block; */
+    display: inline-block;
+    width: 15%;
+    height: 250px;
+    position: absolute;
+    left: 68%;
+    top:55%;
+    border-radius: 10px;
+    
+}
+#cross{
+    position: absolute;
+    left: 96%;
+    bottom: 96%;
+    border: 2px solid black;
+    background: red;
+    border-radius: 50%;
+    text-align: center;
+    width: 8%;
+    cursor: pointer;
+}
+
+#heading{
+    list-style: none;
+    display: block;
+    font-family: 'Inter', sans-serif;   
+}
+
+.container{
+    text-align: center;
+    border: 2px solid black;
+}
+
+.list-item{
+    font-size: large;
+    color: white;
+    list-style: square;
+
+    /* more stuff */
+
+}
+
+#rulesButton{
+    position: absolute;
+    top: 90%;
+    left: 80%;
+}
+
+#nextButton{
+    position: absolute;
+    top: 90%;
+    left: 86%;
+}
+
+#playAgainButton{
+    position: absolute;
+    display: block;
+    top: 50%;
     left: 44%;
-    top:45%;
-
 }

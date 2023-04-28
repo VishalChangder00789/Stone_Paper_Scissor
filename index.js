@@ -28,7 +28,9 @@ let playAgainButton = document.getElementById("playAgainButton");
 let youWinRef = document.getElementById("you-win");
 let pcWinRef = document.getElementById("pc-win");
 let tieRef = document.getElementById("tie");
-
+let crossButtonRef = document.getElementById("cross");
+let rulesBoxRef = document.getElementById("rules-box");
+let rulesButtonRef = document.getElementById("rulesButton");
 let userScoreRef = document.getElementById("user-score");
 let compScoreRef = document.getElementById("comp-score");
 
@@ -36,6 +38,14 @@ youWinRef.style.display = "none";
 pcWinRef.style.display = "none";
 tieRef.style.display = "none";
 playAgainButton.style.display = "none";
+
+rulesButtonRef.addEventListener("click", (e) => {
+  openRulesBox();
+});
+
+crossButtonRef.addEventListener("click", (e) => {
+  closeRulesBox(e);
+});
 
 rockRef.addEventListener("click", (e) => {
   handleOptionClick(e, 0);
@@ -226,4 +236,12 @@ function whoWon(userSelected, pcSelected) {
 
   userScoreRef.innerHTML = userScore;
   compScoreRef.innerHTML = pcScore;
+}
+
+function closeRulesBox() {
+  rulesBoxRef.style.display = "none";
+}
+
+function openRulesBox() {
+  rulesBoxRef.style.display = "inline-block";
 }
