@@ -1,0 +1,169 @@
+body{
+    background: rgb(30, 255, 0);
+}
+.scoreContainer{
+    /* border: 2px solid black; */
+    text-align: center; 
+}
+.scoreOuter{
+    border: 2px solid white;
+    border-radius: 10px;
+    display: inline-block;
+    width: 48%;
+    height: 100px;
+}
+.scoreTextContainer{
+    margin-top: 5px;
+    text-align: left;
+    float: left;
+    /* border: 2px solid blue; */
+    display: inline-block;
+    width: 25%;
+    height:90px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: x-large;
+}
+#scoreText-text{
+    display: block;
+    margin-left: 21%;
+}
+
+
+
+/* 
+
+*/
+
+.scoreDisplay{
+    /* border:2px solid blue; */
+    display: block;
+    width: 15%;
+    height: 85%;
+    float: right;
+    margin-top:5px;
+    margin-right: 2%; 
+    background: white;
+    font-family: 'Inter', sans-serif;
+    border-radius: 10px;
+}
+
+.value1{
+    /* border: 2px solid blue; */
+    font-size: xx-large;
+    margin-top: 2px;
+}
+.value2{
+    /* border: 2px solid blue; */
+    font-size: xx-large;
+    margin-top: 20px;
+}
+
+
+/* 
+
+*/
+
+.img-dimension{
+    height: 100px;
+    width: 100px;
+    margin-top: 12%;
+    /* border: 5px solid red; */
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 0px 10px rgb(236, 140, 62);
+    margin: 4%;  /*Makes it triagular*/  
+}
+
+#rock{
+    box-shadow: 0 0 0px 10px rgb(0, 21, 255);
+}
+#paper{
+    box-shadow: 0 0 0px 10px rgb(255, 128, 0);
+}
+#scissor{
+    box-shadow: 0 0 0px 10px rgb(166, 0, 255);
+}
+
+.text{
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    
+}
+
+.userContainer{
+    border: 2px solid black;
+    display: block;
+    width: 25%;
+    text-align: center;
+    /* Move left right up down */
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+
+#you-win{
+    display: block;
+    width: 8%;
+    text-align: center;
+    position:absolute;
+    left: 45%;
+    top:40%;
+
+}
+
+#pc-win{
+    display: block;
+    width: 8%;
+    text-align: center;
+    position:absolute;
+    left: 45%;
+    top:40%;
+}
+
+#tie{
+    display: block;
+    width: 8%;
+    text-align: center;
+    position:absolute;
+    left: 45%;
+    top:40%;
+}
+
+.winRipple{
+    box-shadow: 0 0 16px 2px rgb(255, 0, 0), 0 0 16px 5px rgb(252, 20, 20),0 0 16px 10px rgb(252, 66, 66);
+}
+
+.universal{
+    display: none;
+}
+
+
+.image-beauty{
+    border-radius: 50%;
+    background: white;
+    /* box-shadow: 0 0 15px 0px rgb(162, 255, 0); */
+}
+
+
+
+.buttons{
+    text-align: center;
+    display: inline-block;
+    width: 10%;
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 5%;
+
+    position:absolute;
+    left: 44%;
+    top:45%;
+
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stone Paper Scissors</title>
+    <link rel="stylesheet" href="/index.css" />
+
+    <!-- TEXT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- TEXT -->
+  </head>
+  <body>
+    <!-- Score Centre -->
+    <div class="scoreContainer">
+      <div class="scoreOuter">
+        <div class="scoreText">
+          <div class="scoreTextContainer">
+            <div id="scoreText-text">Rock</div>
+            <div id="scoreText-text">Paper</div>
+            <div id="scoreText-text">Scissor</div>
+          </div>
+        </div>
+        <div class="scoreDisplay">
+          <div class="computerScoreText">Computer Score</div>
+          <div class="computerScore_Value">
+            <div class="value1" id="comp-score">0</div>
+          </div>
+        </div>
+        <div class="scoreDisplay">
+          <div class="yourScoreText">Your Score</div>
+          <div class="yourScore_Value">
+            <div class="value2" id="user-score">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Score Centre -->
+
+    <!-- Rock Paper Events -->
+    <div id="userContainer-id" class="userContainer">
+      <div class="rockImage">
+        <div class="text">Choose your option</div>
+        <img id="rock" class="img-dimension" src="./Assets//Png/Rock.png" />
+        <img id="paper" class="img-dimension" src="./Assets//Png/Paper.png" />
+        <img
+          id="scissor"
+          class="img-dimension"
+          src="./Assets//Png/Scissors.png"
+        />
+      </div>
+    </div>
+
+      <div class="text" id="you-win">You Win</div>
+      <div class="text" id="pc-win">Pc Win</div>
+      <div class="text" id="tie">Tie</div>
+    <div id="playAgainButton">
+      <button class="buttons"">Play Again</button>
+    </div>
+    <!-- Rock Paper Events -->
+  </body>
+
+  <!-- Rock Paper Events -->
+
+  <!-- Rock Paper Events -->
+
+  <script src="/index.js"></script>
+</html>
