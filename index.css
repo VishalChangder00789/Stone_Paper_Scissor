@@ -3,7 +3,7 @@ body{
 }
 .scoreContainer{
     /* border: 2px solid black; */
-    text-align: center; 
+    text-align: center;     
 }
 .scoreOuter{
     border: 2px solid white;
@@ -96,7 +96,7 @@ body{
 }
 
 .userContainer{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: block;
     width: 25%;
     text-align: center;
@@ -135,7 +135,10 @@ body{
 }
 
 .winRipple{
-    box-shadow: 0 0 16px 2px rgb(255, 0, 0), 0 0 16px 5px rgb(252, 20, 20),0 0 16px 10px rgb(252, 66, 66);
+
+    border-radius: 50%;
+    box-shadow: 0 0 16px 102px rgb(60, 0, 255), 
+   
 }
 
 .universal{
@@ -225,4 +228,9 @@ body{
     display: block;
     top: 50%;
     left: 44%;
+}
+
+
+.victoriusPage{
+    display: 'block';
 }

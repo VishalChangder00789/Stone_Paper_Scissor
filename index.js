@@ -1,23 +1,22 @@
 let userImage = "";
 let pcImage = "";
-
-const rock = "rock";
-const paper = "paper";
-const scissor = "scissor";
-
-const rockImageSrc = "./Assets//Png/Rock.png";
-const paperImageSrc = "./Assets//Png/Paper.png";
-const ScissorImageSrc = "./Assets//Png/Scissors.png";
-
-let userScore = 0;
-let pcScore = 0;
-
-let userSelected = "";
-let pcSelected = "";
-
 // More references
 var yourChoice;
 var pcChoice;
+// CONSTANT VALUES
+const rock = "rock";
+const paper = "paper";
+const scissor = "scissor";
+// IMAGE SOURCES
+const rockImageSrc = "./Assets//Png/Rock.png";
+const paperImageSrc = "./Assets//Png/Paper.png";
+const ScissorImageSrc = "./Assets//Png/Scissors.png";
+// SCORE
+let userScore = 0;
+let pcScore = 0;
+// SELECTION
+let userSelected = "";
+let pcSelected = "";
 
 //references
 let rockRef = document.getElementById("rock");
@@ -33,11 +32,25 @@ let rulesBoxRef = document.getElementById("rules-box");
 let rulesButtonRef = document.getElementById("rulesButton");
 let userScoreRef = document.getElementById("user-score");
 let compScoreRef = document.getElementById("comp-score");
+let nextButtonRef = document.getElementById("nextButton");
+let victoriusRef = document.getElementById("vic-id");
+let scoreContainerRef = document.getElementById("score-container-id");
+let userContainerRef = document.getElementById("userContainer-id");
 
+// INITIALIZATION
+
+victoriusRef.style.display = "none";
 youWinRef.style.display = "none";
 pcWinRef.style.display = "none";
 tieRef.style.display = "none";
 playAgainButton.style.display = "none";
+
+// CLICK EVENT LISTNERS
+
+nextButtonRef.addEventListener("click", (e) => {
+  console.log("Next Button Clicked");
+  nextButtonController();
+});
 
 rulesButtonRef.addEventListener("click", (e) => {
   openRulesBox();
@@ -63,6 +76,8 @@ playAgainButton.addEventListener("click", (e) => {
   playAgain(e);
 });
 
+// HANDLES CLICK ON ANY OF THE THREE OPTIONS
+
 function handleOptionClick(e, valuePassed) {
   if (valuePassed === 0) {
     disableCss();
@@ -72,7 +87,8 @@ function handleOptionClick(e, valuePassed) {
       100,
       "absolute",
       "35%",
-      "45%"
+      "45%",
+      rock
     );
     userSelected = rock;
     pcSelected = generateRandom();
@@ -86,7 +102,8 @@ function handleOptionClick(e, valuePassed) {
       100,
       "absolute",
       "35%",
-      "45%"
+      "45%",
+      paper
     );
 
     pcSelected = generateRandom();
@@ -100,7 +117,8 @@ function handleOptionClick(e, valuePassed) {
       100,
       "absolute",
       "35%",
-      "45%"
+      "45%",
+      scissor
     );
     pcSelected = generateRandom();
     pcImage = instantiator(pcSelected);
@@ -112,9 +130,17 @@ function handleOptionClick(e, valuePassed) {
   whoWon(userSelected, pcSelected);
 }
 
-// Instantiate an Image on the Go
-function instantiatePng(src, width, height, position, left, top) {
+// Return an image Instantiate an Image on the Go
+function instantiatePng(src, width, height, position, left, top, options) {
   let x = document.createElement("IMG");
+
+  if (options == rock) {
+    x.style.boxShadow = "0 0 0px 10px rgb(0, 21, 255)";
+  } else if (options == paper) {
+    x.style.boxShadow = "0 0 0px 10px rgb(255, 128, 0)";
+  } else if (options == scissor) {
+    x.style.boxShadow = "0 0 0px 10px rgb(166, 0, 255)";
+  }
 
   // Attributes
   x.setAttribute("src", `${src}`);
@@ -139,18 +165,42 @@ function generateRandom() {
   return options[Math.floor(Math.random() * options.length)];
 }
 
-// Custom Choice
+// Custom Choice for computer
 function instantiator(pcSelected) {
   if (pcSelected == "rock") {
-    return instantiatePng(rockImageSrc, 100, 100, "absolute", "55%", "45%");
+    return instantiatePng(
+      rockImageSrc,
+      100,
+      100,
+      "absolute",
+      "55%",
+      "45%",
+      rock
+    );
   } else if (pcSelected == "paper") {
-    return instantiatePng(paperImageSrc, 100, 100, "absolute", "55%", "45%");
+    return instantiatePng(
+      paperImageSrc,
+      100,
+      100,
+      "absolute",
+      "55%",
+      "45%",
+      paper
+    );
   } else if (pcSelected == "scissor") {
-    return instantiatePng(ScissorImageSrc, 100, 100, "absolute", "55%", "45%");
+    return instantiatePng(
+      ScissorImageSrc,
+      100,
+      100,
+      "absolute",
+      "55%",
+      "45%",
+      scissor
+    );
   }
 }
 
-// Disable the required CSS , Needs to be added more
+// Disable the required CSS
 function disableCss() {
   document.getElementById("userContainer-id").style.display = "none";
 }
@@ -244,4 +294,26 @@ function closeRulesBox() {
 
 function openRulesBox() {
   rulesBoxRef.style.display = "inline-block";
+}
+
+function nextButtonController() {
+  if (userScore > pcScore) {
+    victoriusRef.style.display = "block";
+
+    // Hide Everthing
+    scoreContainerRef.style.display = "none";
+    userContainerRef.style.display = "none";
+
+    yourChoice.style.display = "none";
+    pcChoice.style.display = "none";
+    youWinRef.style.display = "none";
+    playAgainButton.style.display = "none";
+
+    userImage.style.display = "none";
+    pcImage.style.display = "none";
+
+    rulesBoxRef.style.display = "none";
+    rulesButtonRef.style.display = "none";
+    nextButtonRef.style.display = "none";
+  }
 }
