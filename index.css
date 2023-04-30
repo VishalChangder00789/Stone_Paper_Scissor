@@ -22,14 +22,14 @@ body {
   width: 48%;
   height: 69%;
   margin-top: 2%;
-  position: relative;
+  /* position: relative; */
 }
 .scoreTextContainer {
-  margin-left: 2%;
-  font-size: 150%;
-  display: inline-block;
-  text-align: left;
   float: left;
+  margin-left: 2%;
+  display: inline-block;
+  font-size: 150%;
+  text-align: left;
   /* border: 2px solid blue; */
   width: 25%;
   height: 100%;
@@ -38,7 +38,7 @@ body {
 
 .scoreDisplay {
   /* border: 2px solid blue; */
-  display: block;
+  display: inline-block;
   width: 20%;
   height: 90%;
   float: right;
