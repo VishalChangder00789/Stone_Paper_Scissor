@@ -1,236 +1,393 @@
-body{
-    background: rgb(30, 255, 0);
+body {
+  background: yellowgreen;
+  font-family: "Roboto", sans-serif;
+  font-size: x-large;
 }
-.scoreContainer{
-    /* border: 2px solid black; */
-    text-align: center;     
+
+/*Score Related All*/
+.scoreContainer {
+  /* LEAD */
+  display: block;
+  /* display: none; */
+  /* border: 2px solid black; */
+  text-align: center;
+  width: 100%;
+  height: 25vh;
 }
-.scoreOuter{
-    border: 2px solid white;
-    border-radius: 10px;
-    display: inline-block;
-    width: 48%;
-    height: 100px;
+.scoreOuter {
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: inline-block;
+  width: 48%;
+  height: 69%;
+  margin-top: 2%;
+  position: relative;
 }
-.scoreTextContainer{
-    margin-top: 5px;
-    text-align: left;
-    float: left;
-    /* border: 2px solid blue; */
-    display: inline-block;
-    width: 25%;
-    height:90px;
-    font-family: 'Inter', sans-serif;
-    color: white;
-    font-size: x-large;
+.scoreTextContainer {
+  margin-left: 2%;
+  font-size: 150%;
+  display: inline-block;
+  text-align: left;
+  float: left;
+  /* border: 2px solid blue; */
+  width: 25%;
+  height: 100%;
+  color: white;
 }
-#scoreText-text{
-    display: block;
-    margin-left: 21%;
+
+.scoreDisplay {
+  /* border: 2px solid blue; */
+  display: block;
+  width: 20%;
+  height: 90%;
+  float: right;
+  margin-top: 5px;
+  margin-right: 2%;
+  background: white;
+  border-radius: 10px;
 }
+
+.valueContainer {
+  margin-top: 2%;
+  font-size: 200%;
+}
+.scoreDesign {
+  /* border: 2px solid purple; */
+  margin-top: 5%;
+}
+
+.ScoreText {
+  font-size: 65%;
+  /* border: 2px solid black; */
+}
+/*Score Related All*/
+
+/*
 
 
 
-/* 
 
 */
 
-.scoreDisplay{
-    /* border:2px solid blue; */
-    display: block;
-    width: 15%;
-    height: 85%;
-    float: right;
-    margin-top:5px;
-    margin-right: 2%; 
-    background: white;
-    font-family: 'Inter', sans-serif;
-    border-radius: 10px;
+/* All Images class and individual movement control 
+The Box which is containing the Three Options */
+.userContainer {
+  /* LEAD */
+  display: inline-block;
+  /* display: none; */
+  width: 25%;
+  text-align: center;
+}
+#userContainer-id {
+  position: absolute;
+  top: 40%;
+  left: 30%;
 }
 
-.value1{
-    /* border: 2px solid blue; */
-    font-size: xx-large;
-    margin-top: 2px;
+#rock {
+  box-shadow: 0 0 0px 10px rgb(0, 21, 255);
 }
-.value2{
-    /* border: 2px solid blue; */
-    font-size: xx-large;
-    margin-top: 20px;
+#paper {
+  box-shadow: 0 0 0px 10px rgb(255, 128, 0);
+}
+#scissor {
+  box-shadow: 0 0 0px 10px rgb(166, 0, 255);
 }
 
+.img-dimension {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: white;
+  border-radius: 50%;
+}
+/* All Images class and individual movement control 
+The Box which is containing the Three Options */
 
-/* 
+/*
+
+
+
 
 */
 
-.img-dimension{
-    height: 100px;
-    width: 100px;
-    margin-top: 12%;
-    /* border: 5px solid red; */
-    border-radius: 50%;
-    background: white;
-    box-shadow: 0 0 0px 10px rgb(236, 140, 62);
-    margin: 4%;  /*Makes it triagular*/  
+/*Decision*/
+.DeciderContainer {
+  /* LEAD */
+  display: inline-block;
+  /* display: none; */
+  /* border: 2px solid darkmagenta; */
+  width: 12vw;
+  height: 18vh;
+  text-align: center;
+  font-size: xx-large;
+}
+#DeciderContainer-id {
+  position: absolute;
+  top: 45%;
+  left: 38%;
+}
+.textContainer {
+  display: inline-block;
+  /* border: 2px solid blue; */
+  width: 100%;
+  text-align: center;
+  height: 70%;
+  margin-left: 5%;
+}
+.text_Larger {
+  display: inline-block;
+  color: #ffffff;
+  width: 100%;
+  /* border: 2px solid red; */
+}
+#text_Larger_id {
+  margin-top: 15%;
+}
+.text {
+  display: inline-block;
+  /* border: 2px solid rgb(0, 255, 72); */
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  margin-top: 0%;
 }
 
-#rock{
-    box-shadow: 0 0 0px 10px rgb(0, 21, 255);
+#playAgainButton {
+  display: inline-block;
+  width: 100%;
+  background-color: #ffffff;
+  cursor: pointer;
+  /* border: 2px solid rgb(166, 2, 255); */
+  padding: 2px;
+  border-radius: 5px;
 }
-#paper{
-    box-shadow: 0 0 0px 10px rgb(255, 128, 0);
-}
-#scissor{
-    box-shadow: 0 0 0px 10px rgb(166, 0, 255);
-}
-
-.text{
-    font-family: 'Inter', sans-serif;
-    font-size: 25px;
-    color: rgb(0, 0, 0);
-    background: white;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    
+#playAgainButton-id {
+  color: black;
+  font-size: medium;
+  /* border: 2px solid red; */
 }
 
-.userContainer{
-    /* border: 2px solid black; */
-    display: block;
-    width: 25%;
-    text-align: center;
-    /* Move left right up down */
-    position: absolute;
-    top: 35%;
-    left: 35%;
+#you-win {
+  /* display: block;
+  width: 8%;
+  text-align: center;
+  position: absolute; */
 }
 
-#you-win{
-    display: block;
-    width: 8%;
-    text-align: center;
-    position:absolute;
-    left: 45%;
-    top:40%;
-
+#pc-win {
+  /* display: block;
+  width: 8%;
+  text-align: center;
+  position: absolute; */
+  /* position: absolute; */
 }
 
-#pc-win{
-    display: block;
-    width: 8%;
-    text-align: center;
-    position:absolute;
-    left: 45%;
-    top:40%;
+#tie {
+  /* display: block;
+  width: 8%;
+  text-align: center;
+  position: absolute; */
 }
 
-#tie{
-    display: block;
-    width: 8%;
-    text-align: center;
-    position:absolute;
-    left: 45%;
-    top:40%;
+/*Decision*/
+
+/*GLOBAL CLASS FOR BUTTONS*/
+.buttons {
+  background: none;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+.buttonEsthetics {
+  font-size: medium;
+  color: #ffffff;
 }
 
-.winRipple{
+/*RULESS*/
 
-    border-radius: 50%;
-    box-shadow: 0 0 16px 102px rgb(60, 0, 255), 
-   
+.rulesBox {
+  display: inline-block;
+  /* display: none; */
+  border: 5px solid rgb(255, 255, 255);
+  background: darkgreen;
+  height: 30%;
+  border-radius: 10px;
+  padding: 5px;
+}
+.rulesCrossClass {
+  border: 2px solid black;
+  background: red;
+  border-radius: 50%;
+  text-align: center;
+  width: 8%;
+  height: 8%;
+  cursor: pointer;
+  padding: 2px;
+  font-size: 65%;
+}
+.rulesBox div.rulesCrossClass:hover {
+  box-shadow: 0 0 35px 5px red;
+  transition-delay: 0.3s;
+}
+.rulesHeading {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 5px;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+.rulesContainer {
+  text-align: center;
+  /* border: 2px solid black; */
+  height: 100%;
+  width: 100%;
+}
+.rules {
+  display: inline-block;
+  border: 5px solid red;
+  list-style: square;
+  float: left;
+}
+#rulesBox-id {
+  position: absolute;
+  width: 15%;
+  left: 68%;
+  top: 55%;
+}
+#cross-id {
+  position: absolute;
+  left: 96%;
+  bottom: 96%;
 }
 
-.universal{
-    display: none;
+.list-item {
+  font-family: sans-serif;
+  font-size: small;
+  color: white;
+  list-style: none;
+  /* border: 2px solid blue; */
+  display: inline-block;
+  width: 100%;
+  overflow: visible;
+  margin-top: 3%;
+  text-align: center;
 }
 
+li::before {
+  position: sticky;
+  margin-right: 2px;
+  float: left;
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  list-style: square;
+  display: inline-block;
+  color: rgb(255, 251, 0); /* Change the color */
+}
+/*RULESS*/
 
-.image-beauty{
-    border-radius: 50%;
-    background: white;
-    /* box-shadow: 0 0 15px 0px rgb(162, 255, 0); */
+/*
+
+*/
+#rulesButton {
+  position: absolute;
+  top: 90%;
+  left: 80%;
+  width: 4%;
+  padding: 5px;
 }
 
-
-
-.buttons{
-    text-align: center;
-    display: inline-block;
-    font-family: 'Inter', sans-serif;
-    font-size: 25px;
-    color: rgb(0, 0, 0);
-    background: white;
-    border-radius: 10px;
-    margin-bottom: 5%;
+#nextButton {
+  position: absolute;
+  top: 90%;
+  left: 86%;
+  width: 4%;
+  padding: 5px;
 }
 
-.rulesBox{
-
-    border: 5px solid rgb(255, 255, 255);
-    background: green;
-    /* display: block; */
-    display: inline-block;
-    width: 15%;
-    height: 250px;
-    position: absolute;
-    left: 68%;
-    top:55%;
-    border-radius: 10px;
-    
+.selectionDisplayContainer {
+  /* border: 2px solid blue; */
+  display: inline-block;
+  /* display: none; */
+  width: 40%;
+  text-align: center;
+  font-size: 65%;
+  position: absolute;
+  color: #ffffff;
+  text-shadow: 2px 1px 10px #090909;
 }
-#cross{
-    position: absolute;
-    left: 96%;
-    bottom: 96%;
-    border: 2px solid black;
-    background: red;
-    border-radius: 50%;
-    text-align: center;
-    width: 8%;
-    cursor: pointer;
+#selectionDisplayContainer-id {
+  left: 23%;
+  top: 35%;
+}
+.selected {
+  display: inline-block;
+}
+#you-selected {
+  float: left;
 }
 
-#heading{
-    list-style: none;
-    display: block;
-    font-family: 'Inter', sans-serif;   
+#pc-selected {
+  float: right;
 }
 
-.container{
-    text-align: center;
-    border: 2px solid black;
+.victoriusPage {
+  position: absolute;
+  display: "inline-block";
+  /* border: 2px solid black; */
+  text-align: center;
+  justify-content: center;
+  width: 35vw;
+  height: 65vh;
+}
+#vic-id {
+  left: 30vw;
+  top: 17vh;
+}
+.Trophy-image {
+  display: inline-block;
+  /* border: 2px solid red; */
+  height: 65%;
+  width: 65%;
+}
+#Trophy-image-id {
 }
 
-.list-item{
-    font-size: large;
-    color: white;
-    list-style: square;
-
-    /* more stuff */
-
+.BigText {
+  /* border: 2px solid green; */
+  display: inline-block;
+  color: #ffffff;
+  font-size: xxx-large;
+  letter-spacing: 10px;
+  width: 100%;
 }
-
-#rulesButton{
-    position: absolute;
-    top: 90%;
-    left: 80%;
+#BigText-id {
+  top: 25%;
 }
-
-#nextButton{
-    position: absolute;
-    top: 90%;
-    left: 86%;
+.SmallText {
+  display: inline-block;
+  color: #ffffff;
+  font-size: medium;
+  letter-spacing: 10px;
 }
-
-#playAgainButton{
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 44%;
+#SmallText-id {
+  top: 85%;
+  left: 20%;
 }
-
-
-.victoriusPage{
-    display: 'block';
+#playAgainButton-2 {
+  display: inline-block;
+  left: 0%;
+  top: 80%;
+  width: 100%;
+  height: 7%;
+  letter-spacing: 15px;
+  background: #ffffff;
+  margin-top: 5%;
+}
+#playAgainButton2-id {
+  display: inline-block;
+  color: black;
+  font-size: medium;
+  text-align: center;
 }

@@ -1,98 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stone Paper Scissors</title>
-    <link rel="stylesheet" href="/index.css" />
 
-    <!-- TEXT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <!-- TEXT -->
-  </head>
-  <body>
-    <!-- Score Centre -->
-    <div class="scoreContainer" id="score-container-id">
-      <div class="scoreOuter">
-        <div class="scoreText">
-          <div class="scoreTextContainer">
-            <div id="scoreText-text">Rock</div>
-            <div id="scoreText-text">Paper</div>
-            <div id="scoreText-text">Scissor</div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stone Paper Scissors</title>
+  <link rel="stylesheet" href="/index.css" />
+
+  <!-- TEXT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+  <!-- TEXT -->
+</head>
+
+<body>
+  <!-- Score Centre -->
+  <div class="scoreContainer" id="score-container-id">
+
+    <div class="scoreOuter"> <!-- White border wala-->
+
+      <div class="scoreTextContainer">
+        <div id="scoreText-text">ROCK</div>
+        <div id="scoreText-text">PAPER</div>
+        <div id="scoreText-text">SCISSOR</div>
+      </div>
+
+
+      <div class="scoreDisplay">
+        <div class="scoreDesign">
+          <div class="ScoreText">COMPUTER</div>
+          <div class="ScoreText">SCORE</div>
         </div>
-        <div class="scoreDisplay">
-          <div class="computerScoreText">Computer Score</div>
-          <div class="computerScore_Value">
-            <div class="value1" id="comp-score">0</div>
-          </div>
+        <div class="valueContainer" id="pc-score-id">0</div>
+      </div>
+
+      <div class="scoreDisplay">
+        <div class="scoreDesign">
+          <div class="ScoreText">YOUR</div>
+          <div class="ScoreText">SCORE</div>
         </div>
-        <div class="scoreDisplay">
-          <div class="yourScoreText">Your Score</div>
-          <div class="yourScore_Value">
-            <div class="value2" id="user-score">0</div>
-          </div>
-        </div>
+        <div class="valueContainer" id="user-score-id">0</div>
       </div>
     </div>
-    <!-- Score Centre -->
+  </div>
 
-    <!-- Rock Paper Events -->
-    <div id="userContainer-id" class="userContainer">
-      <div class="rockImage">
-        <div class="text">Choose your option</div>
-        <img id="rock" class="img-dimension" src="./Assets//Png/Rock.png" />
-        <img id="paper" class="img-dimension" src="./Assets//Png/Paper.png" />
-        <img
-          id="scissor"
-          class="img-dimension"
-          src="./Assets//Png/Scissors.png"
-        />
-      </div>
+  <!-- ROCK PAPER SCISSOR TRIANGLE -->
+
+  <div id="userContainer-id" class="userContainer">
+    <div>
+      <img id="rock" class="img-dimension" src="./Assets//Png2/Rock.png" />
+      <img id="paper" class="img-dimension" src="./Assets//Png2/Paper.png" />
+      <img id="scissor" class="img-dimension" src="./Assets//Png2/Scissors.png" />
+    </div>
+  </div>
+  <!-- ROCK PAPER SCISSOR TRIANGLE -->
+
+  <!-- WHO WON -->
+
+  <div class="DeciderContainer" id="DeciderContainer-id">
+    <div class="textContainer" id="you-win">
+      <div class="text_Larger">YOU WIN</div>
+      <div class="text">AGAINST PC </div>
     </div>
 
-      <div class="text" id="you-win">You Win</div>
-      <div class="text" id="pc-win">Pc Win</div>
-      <div class="text" id="tie">Tie</div>
-      <div id="playAgainButton">
-        <button class="buttons">Play Again</button>
-      </div>
-    <!-- Rock Paper Events -->
-
-    <div class="rulesBox" id="rules-box">
-      <div id="cross">X</div>
-      <div class="container">
-      <li class="list-item" id="heading">Game Rules</li>
-      <li class="list-item">asjnbdsjnbvdjbdsvj</li>
-      <li class="list-item">asjnbdsjnbvdjbdsvj</li>
-      <li class="list-item">asjnbdsjnbvdjbdsvj</li>
-      <li class="list-item">asjnbdsjnbvdjbdsvj</li>
-    </div>
+    <div class="textContainer" id="pc-win">
+      <div class="text_Larger">YOU LOST</div>
+      <div class="text">AGAINST PC </div>
     </div>
 
-    <div id="rulesButton">
-      <button class="buttons"">Rules</button>
-    </div>
-    <div id="nextButton">
-      <button class="buttons"">Next</button>
+    <div class="textContainer" id="tie">
+      <div id="text_Larger_id" class="text_Larger">TIE UP</div>
     </div>
 
-    <div class="victoriusPage" id="vic-id">
-      add victorius content
+    <div class="buttons" id="playAgainButton">
+      <div id="playAgainButton-id">PLAY AGAIN</div>
     </div>
 
+  </div>
 
-  </body>
+  <!-- WHO WON -->
 
-  <!-- Rock Paper Events -->
+  <!-- WHAT SELECTED -->
+  <div class="selectionDisplayContainer" id="selectionDisplayContainer-id">
+    <div class="selected" id="you-selected">YOU PICKED</div>
+    <div class="selected" id="pc-selected">PC PICKED</div>
+  </div>
+  <!-- WHAT SELECTED -->
 
-  <!-- Rock Paper Events -->
 
-  <script src="/index.js"></script>
+  <!-- RULES BUTTON AND NEXT BUTTON -->
+
+  <div id="AllButtons">
+    <div class='buttons' id="rulesButton">
+      <div class="buttonEsthetics">RULES</div>
+    </div>
+
+    <div class='buttons' id="nextButton">
+      <div class="buttonEsthetics">NEXT</div>
+    </div>
+  </div>
+
+  <!-- RULES BUTTON AND NEXT BUTTON -->
+
+
+  <!-- RULES BOX -->
+  <div class="rulesBox" id="rulesBox-id">
+    <div class="rulesCrossClass" id="cross-id">X</div>
+    <div class="rulesHeading">Game Rules</div>
+    <div class="rulesContainer">
+      <li class="list-item">Rock beats scissors,scissor beats paper and paper beats rock.</li>
+      <li class="list-item">Agree ahead of time wheather you'll count off 'rock , paper ,scissors,shoot or just
+        rock , paper , scissors
+      </li>
+
+      <li class="list-item">Use rock paper scissors to settle minor decisions or simply play to pass the time</li>
+      <li class="list-item">If both player lay down the same hand, each player lay down another hand</li>
+    </div>
+  </div>
+  <!-- RULES BOX -->
+
+  <!-- VICTORY PAGE -->
+
+  <div class=" victoriusPage" id="vic-id">
+    <img class='Trophy-image' id="Trophy-image-id" src="./Assets//Png2/Trophy.png">
+    <div class="BigText" id="BigText-id">HURRAY!!!</div>
+    <div class="SmallText" id="SmallText-id">YOU WON THE GAME</div>
+    <div class="buttons" id="playAgainButton-2">
+      <div id="playAgainButton2-id">PLAY AGAIN</div>
+    </div>
+  </div>
+
+  <!-- VICTORY PAGE -->
+</body>
+
+
+
+<script type="module" src="/index.js"></script>
+
 </html>
