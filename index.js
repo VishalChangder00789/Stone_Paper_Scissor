@@ -186,6 +186,8 @@ function WhatBeatsWhat(userSelected, pcSelected) {
     tie = true;
   } else {
     pcWin = true;
+    pcImage.style.boxShadow =
+      "0px 0px 10px #063b00, 0px 0px 20px #0a5d00, 0px 0px 30px #089000, 0px 0px 40px #1fc600, 0px 0px 50px #0eff00  ";
     pcScore += 5;
   }
   sessionStorage.setItem("userScore", userScore);
