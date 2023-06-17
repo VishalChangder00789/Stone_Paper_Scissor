@@ -178,14 +178,13 @@ function WhatBeatsWhat(userSelected, pcSelected) {
     (userSelected == paper && pcSelected == rock) ||
     (userSelected == scissor && pcSelected == paper)
   ) {
-    console.log("User Wins");
     userWin = true;
+    userImage.style.boxShadow =
+      "0px 0px 10px #063b00, 0px 0px 20px #0a5d00, 0px 0px 30px #089000, 0px 0px 40px #1fc600, 0px 0px 50px #0eff00 ";
     userScore += 5;
   } else if (userSelected == pcSelected) {
-    console.log("Tie");
     tie = true;
   } else {
-    console.log("Pc Wins");
     pcWin = true;
     pcScore += 5;
   }
@@ -199,6 +198,7 @@ function WhatBeatsWhat(userSelected, pcSelected) {
   }
   return;
 }
+
 function WhoWon() {
   deiciderContainer.style.display = "inline-block";
 
@@ -241,7 +241,7 @@ function HandleUserChoiceButton(param) {
 
 function HandlePlayAgain() {
   // Activate the triangle
-  userContainer_Ref.style.display = "inline-block";
+  userContainer_Ref.style.display = "flex";
   userImage.style.display = "none";
   pcImage.style.display = "none";
   youPickPcPick_Ref.style.display = "none";

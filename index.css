@@ -78,10 +78,22 @@ The Box which is containing the Three Options */
   /* display: none; */
   width: 25%;
   text-align: center;
+  display: flex;
+  /* border: 2px solid red; */
+  height: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userContainerTop {
+  display: flex;
+  width: 70%;
+  /* border: 2px solid green; */
+  justify-content: space-between;
 }
 #userContainer-id {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 30%;
 }
 
